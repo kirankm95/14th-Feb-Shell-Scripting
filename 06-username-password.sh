@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "please enter you username:"
-read -p $VAR1
+read $VAR1
 
 echo "please enter your password:"
 read -s $VAR2
