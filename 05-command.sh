@@ -2,4 +2,4 @@
 
 VAR1=$(hostnamectl)
 
-echo "please find the below host info: \n ${VAR1}"
+echo -e "please find the below host info: \n ${VAR1}"
