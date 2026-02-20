@@ -38,6 +38,6 @@ echo "mentioned packages are $VAR1"
 
 for i in $VAR1
 do
-yum install $i
+yum install $i &>> $LOGFILE
 VALIDATE $? ${i}
-done &>> $LOGFILE
+done
