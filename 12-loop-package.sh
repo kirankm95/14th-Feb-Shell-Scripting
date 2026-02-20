@@ -28,10 +28,15 @@ else
     exit 1
 fi
 
+echo "mentioned packages are $VAR1"
+
 # yum install ${VAR1} -y &>> $LOGFILE
 # VALIDATE $? ${VAR1}
 
 # yum install ${VAR2} -y &>> $LOGFILE
 # VALIDATE $? ${VAR2}
 
-echo "mentioned packages are $VAR1"
+for i in $VAR1
+do
+yum install $i
+done
