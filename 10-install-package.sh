@@ -1,6 +1,7 @@
 #!/bin/bash
 
 VAR1=$1
+VAR2=$2
 USER=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$DATE"
@@ -30,3 +31,6 @@ fi
 
 yum install ${VAR1} -y &>> $LOGFILE
 VALIDATE $? ${VAR1}
+
+yum install ${VAR2} -y &>> $LOGFILE
+VALIDATE $? ${VAR2}
