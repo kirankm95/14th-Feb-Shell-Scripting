@@ -9,14 +9,19 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+VALIDATE2(){
+    if 
+}
+
 echo "this $0 started executing at $DATE and will store logs into $LOGFILE"
 
 if [ $USER -eq 0 ]
 then
-    echo -e "$G You are root user$N, hence we are procedding further"
+    echo -e "$GYou are root user$N, hence we are procedding further"
 else
-    echo "You are not user, so exiting"
+    echo -e "$RYou are not user$N, so exiting"
     exit 1
 fi
 
 yum install ${VAR1} -y
+VALIDATE $? ${VAR1}
