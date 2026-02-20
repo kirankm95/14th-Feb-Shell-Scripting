@@ -9,7 +9,20 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-VALIDATE(){
+
+VALIDATE1(){
+    for i in $VAR1
+    do
+        yum list installed $i
+        if [ $? -eq 0 ]
+        then
+        echo "package $i already installed"
+        else
+        echo "package $i not installed, we are going to install it"
+    done
+        }
+
+VALIDATE2(){
     if [ $1 -eq 0 ]
     then
         echo -e "$G installation of $2 is success $N"
@@ -38,6 +51,7 @@ echo "mentioned packages are $VAR1"
 
 for i in $VAR1
 do
+VALIDATE1
 yum install $i &>> $LOGFILE
-VALIDATE $? ${i}
+VALIDATE2 $? ${i}
 done
