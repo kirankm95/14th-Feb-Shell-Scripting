@@ -40,3 +40,5 @@ for i in $VAR1
 do
 yum install $i
 done
+
+VALIDATE $? ${i}
