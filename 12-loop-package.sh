@@ -39,6 +39,5 @@ echo "mentioned packages are $VAR1"
 for i in $VAR1
 do
 yum install $i
-done
-
 VALIDATE $? ${i}
+done
