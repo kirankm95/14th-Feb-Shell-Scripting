@@ -11,4 +11,4 @@ else
     exit 1
 fi
 
-yum install $VAR1 -y
+yum install ${VAR1} -y
