@@ -15,6 +15,7 @@ VALIDATE1(){
         if [ $? -eq 0 ]
         then
         echo "package $1 already installed"
+        exit 1
         else
         echo "package $1 not installed, we are going to install it"
         fi
