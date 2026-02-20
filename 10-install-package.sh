@@ -9,8 +9,12 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-VALIDATE2(){
-    if 
+VALIDATE(){
+    if [ $1 -eq 0 ]
+    then
+        echo "installation of $2 is success"
+    else
+        echo "installation of $2 is f...edup failed"
 }
 
 echo "this $0 started executing at $DATE and will store logs into $LOGFILE"
