@@ -15,7 +15,7 @@ VALIDATE(){
         echo "installation of $2 is success"
     else
         echo "installation of $2 is f...edup failed"
-}
+        }
 
 echo "this $0 started executing at $DATE and will store logs into $LOGFILE"
 
