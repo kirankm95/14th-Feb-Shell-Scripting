@@ -18,7 +18,7 @@ VALIDATE(){
     fi
         }
 
-echo "this $0 started executing at $DATE and will store logs into $LOGFILE" $LOGFILE
+echo "this $0 started executing at $DATE and will store logs into $LOGFILE" &>> $LOGFILE
 
 if [ $USER -eq 0 ]
 then
