@@ -20,6 +20,7 @@ VALIDATE1(){
         else
         echo "package $i not installed, we are going to install it"
     done
+    fi
         }
 
 VALIDATE2(){
