@@ -5,7 +5,7 @@ USER=$(id -u)
 DATE=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$DATE"
 
-this $0 started executing at $DATE and will store logs into $LOGFILE
+echo "this $0 started executing at $DATE and will store logs into $LOGFILE"
 
 if [ $USER -eq 0 ]
 then
