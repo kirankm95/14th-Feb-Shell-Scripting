@@ -11,16 +11,13 @@ N="\e[0m"
 
 
 VALIDATE1(){
-    for i in $VAR1
-    do
-        yum list installed $i &>> $LOGFILE
+        yum list installed $1 &>> $LOGFILE
         if [ $? -eq 0 ]
         then
-        echo "package $i already installed"
+        echo "package $1 already installed"
         else
-        echo "package $i not installed, we are going to install it"
+        echo "package $1 not installed, we are going to install it"
         fi
-    done
         }
 
 VALIDATE2(){
@@ -46,7 +43,7 @@ echo "mentioned packages are $VAR1"
 
 for i in $VAR1
 do
-VALIDATE1
+VALIDATE1 ${i}
 yum install $i &>> $LOGFILE
 VALIDATE2 $? ${i}
 done
