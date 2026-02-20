@@ -12,13 +12,13 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo "installation of $2 is success"
+        echo -e "$G installation of $2 is success $N"
     else
-        echo "installation of $2 is f...edup failed"
+        echo -e "$R installation of $2 is f...edup failed $N"
     fi
         }
 
-echo "this $0 started executing at $DATE and will store logs into $LOGFILE"
+echo "this $0 started executing at $DATE and will store logs into $LOGFILE" $LOGFILE
 
 if [ $USER -eq 0 ]
 then
@@ -28,5 +28,5 @@ else
     exit 1
 fi
 
-yum install ${VAR1} -y
+yum install ${VAR1} -y &>> $LOGFILE
 VALIDATE $? ${VAR1}
