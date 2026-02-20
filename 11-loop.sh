@@ -1,7 +1,6 @@
 #!/bin/bash
 
-VAR1=$1
-for i in {1..$VAR1}
+for i in {1..10}
 do
     echo "$i"
 done
